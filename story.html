@@ -1,0 +1,98 @@
+ <!doctype html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Story of Nigerian Women</title>
+
+</head>
+<body>
+
+<div class="site">
+
+  <!-- HEADER -->
+  <header>
+    <a class="brand" href="index.html">
+      <img src="map.png" width="100" height="100" object-fit:cover;>
+      <div>
+        <h1 style="color:var(--light)">When Women Rise, Nigeria Rises</h1>
+        <div style="font-size:12px;color:var(--light)">G4EP•Celebrating the fearless women who fought for our nation’s freedom, equality, and progress.</div>
+      </div>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="story.html">Story</a>
+      <a href="trailblazers.html" class="active">Trailblazers</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About / Contact</a>
+    </nav>
+
+    <!-- Mobile toggle -->
+    <button class="hamburger" aria-label="Open menu" id="hamburger">☰</button>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="index.html">Home</a><br>
+      <a href="story.html">Story</a><br>
+      <a href="trailblazers.html">Trailblazers</a><br>
+      <a href="gallery.html">Gallery</a><br>
+      <a href="about.html">About / Contact</a>
+    </div>
+  </header>
+
+<!-- STORY -->
+  <section id="story" class="story" aria-labelledby="storyTitle">
+    <h3 id="storyTitle">A Journey Through Time</h3>
+
+    <div class="timeline">
+      <div class="timeline-item">
+       <strong>Introduction</strong>
+       <p>Before the Nigerian flag was first raised on October 1st, 1960, women like Funmilayo Ransome-Kuti and Margaret Ekpo were already fighting battles for equality and justice.
+Today, as we celebrate independence, we honor their courage, and pledge to continue building a Nigeria where every girl’s dream can rise as high as the eagle on our flag.</p>
+     </div>
+
+     <div class="timeline-item">
+        <strong>Before Independence</strong>
+        <p>Funmilayo Ransome-Kuti, often called the  Lioness of Lisabi. Born in Abeokuta in 1900, she was no ordinary woman—she was the first Nigerian woman to drive a car, but more importantly, she drove a movement. At a time when colonial taxes crushed market women, she led thousands in protest, speaking boldly against injustice. Her activism shook the system so much that the king himself had to step down for a while. Funmilayo’s fight was not just for women in Abeokuta, but for the freedom and dignity of all Nigerians.</p>
+      </div>
+
+      <div class="timeline-item">
+        <strong>Independence Era</strong>
+        <p>Gambo Sawaba (1933–2001) was a fearless northern Nigerian activist who defied tradition and colonial authority to demand justice for women. As a teenage organizer, she led bold campaigns for girls’ education, workers’ rights, and the right of northern women to vote, enduring repeated arrests and imprisonment for her activism. Her courage made her a powerful voice in the movement that carried Nigeria into independence.</p>
+      </div>
+
+      <div class="timeline-item">
+        <strong>Post-Independence</strong>
+        <p>From the world of politics and protests, we move to the corridors of finance and global leadership, where Ngozi Okonjo-Iweala stands tall. Born in 1954 in Delta State, Ngozi’s sharp mind carried her from Harvard to the World Bank, and back home as Nigeria’s Finance Minister. She became known for battling corruption and insisting that public funds should serve the people, not just the powerful. Today, she sits at the top of world trade as the first African and first woman to lead the World Trade Organization, proving that a Nigerian woman can influence not just her country, but the entire globe.
+</p>
+      </div>
+
+      <div class="timeline-item">
+        <strong>Today</strong>
+        <p>Contemporary champions like Hon. Dr. Judith Mayen Etuk Ogbara who has supported over 500 female students in Akwa Ibom State in the past seven years by sponsoring their WAEC and JAMB forms purchase. She has promoted the educational advancement of the girl-child in the country, carrying the legacy into global leadership and community empowerment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 • Celebrating Nigerian Women • Created by R.I.S.E Digital Training participants
+  </footer>
+</div>
+
+<!-- Simple JS for mobile menu -->
+<script>
+  const burger = document.getElementById('hamburger');
+  const menu  = document.getElementById('mobileMenu');
+  burger.addEventListener('click', ()=> {
+    const visible = menu.getAttribute('aria-hidden') === 'false';
+    menu.setAttribute('aria-hidden', String(!visible));
+    menu.style.display = visible ? 'none' : 'block';
+  });
+  // Close menu on link click
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> menu.style.display='none'));
+</script>
+
+</body>
+</html>

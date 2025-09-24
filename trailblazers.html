@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Story of Nigerian Women</title>
+
+</head>
+<body>
+
+<div class="site">
+
+  <!-- HEADER -->
+  <header>
+    <a class="brand" href="index.html">
+      <img src="map.png" width="100" height="100" object-fit:cover;>
+      <div>
+        <h1 style="color:var(--light)">When Women Rise, Nigeria Rises</h1>
+        <div style="font-size:12px;color:var(--light)">G4EP•Celebrating the fearless women who fought for our nation’s freedom, equality, and progress.</div>
+      </div>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="story.html">Story</a>
+      <a href="trailblazers.html" class="active">Trailblazers</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About / Contact</a>
+    </nav>
+
+    <!-- Mobile toggle -->
+    <button class="hamburger" aria-label="Open menu" id="hamburger">☰</button>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="index.html">Home</a><br>
+      <a href="story.html">Story</a><br>
+      <a href="trailblazers.html">Trailblazers</a><br>
+      <a href="gallery.html">Gallery</a><br>
+      <a href="about.html">About / Contact</a>
+    </div>
+  </header>
+
+<!-- TRAILBLAZERS GRID -->
+  <section id="trailblazers" aria-labelledby="trailTitle">
+    <h3 id="trailTitle" style="color:var(--green)">Trailblazers & Heroes</h3>
+    <div class="grid">
+      <!-- Repeat these .person blocks for each woman -->
+      <article class="person">
+        <img src="Ifedayo Durosinmi-Etti.jpeg">
+        <h4>Ifedayo Durosinmi-Etti </h4>
+        <p style="font-size:13px; color:var(--muted)">⁠Founder & CEO of Herconomy, a digital platform for female entrepreneurs & professionals; helps them access grants, mentorships, jobs. She has been active in broader youth and women’s development networks, advisory groups etc.</p>
+      </article>
+
+      <article class="person">
+        <img src="Odunayo Eweniyi.jpeg">
+        <h4>Odunayo Eweniyi</h4>
+        <p style="font-size:13px; color:var(--muted)">Co-founder of PiggyVest, one of Nigeria’s biggest digital savings and investment platforms. Co-founder of Feminist Coalition, a group advocating for women’s rights and social justice. Recognized as one of Africa’s brightest young innovators.</p>
+      </article>
+
+      <article class="person">
+        <img src="Folorunsho Alakija.jpeg">
+        <h4>Folorunsho Alakija</h4> 
+        <p style="font-size:13px; color:var(--muted)">Successful entrepreneur and philanthropist. She is currently the group managing director of The Rose of Sharon Group and also serves as executive vice chairman of Famfa Oil Limited.</p>
+      </article>
+
+      <article class="person">
+        <img src="Hon Dr Mrs Judith.jpg" alt="">
+        <h4>Hon. Dr. Judith M. E. Ogbara</h4>
+        <p style="font-size:13px; color:var(--muted)">Chairperson—G4EP Initiative, supporting digital growth for women.</p>
+      </article>
+    </div>
+  </section>
+
+ <!-- FOOTER -->
+  <footer>
+    © 2025 • Celebrating Nigerian Women • Created by R.I.S.E Digital Training participants
+  </footer>
+</div>
+
+<!-- Simple JS for mobile menu -->
+<script>
+  const burger = document.getElementById('hamburger');
+  const menu  = document.getElementById('mobileMenu');
+  burger.addEventListener('click', ()=> {
+    const visible = menu.getAttribute('aria-hidden') === 'false';
+    menu.setAttribute('aria-hidden', String(!visible));
+    menu.style.display = visible ? 'none' : 'block';
+  });
+  // Close menu on link click
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> menu.style.display='none'));
+</script>
+
+</body>
+</html>
